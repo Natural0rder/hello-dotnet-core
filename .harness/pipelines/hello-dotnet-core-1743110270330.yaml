@@ -20,12 +20,16 @@ pipeline:
           execution:
             steps:
               - step:
-                  identifier: echo
-                  name: echo
-                  spec:
-                    command: echo hello world
-                  timeout: ""
                   type: Run
+                  identifier: build_dotnet_app
+                  name: Build DotNet App
+                  spec:
+                    shell: Sh
+                    command: |-
+                      echo "Welcome to Harness CI"
+                      dotnet restore
+                      dotnet build --no-restore
+                      dotnet test --no-build --verbosity normal
           platform:
             arch: Amd64
             os: Linux
