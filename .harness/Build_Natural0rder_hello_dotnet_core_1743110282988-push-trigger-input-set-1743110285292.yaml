@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Natural0rder_hello_dotnet_core_1743110282988-push-trigger-input-set
+  identifier: Build_Natural0rder_hello_dotnet_core_1743110282988pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_Natural0rder_hello_dotnet_core_1743110282988
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
