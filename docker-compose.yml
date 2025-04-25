@@ -1,0 +1,7 @@
+
+services:
+  helloworlddotnetcore:
+    image: helloworlddotnetcore
+    build:
+      context: .
+      dockerfile: ./Dockerfile
