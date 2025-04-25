@@ -30,10 +30,16 @@ pipeline:
                       dotnet restore
                       dotnet build --no-restore
                       dotnet test --no-build --verbosity normal
+              - step:
+                  name: PushToDockerHub-FromTemplate
+                  identifier: PushToDockerHubFromTemplate
+                  template:
+                    templateRef: BuildAndPushToDockerHub
+                    versionLabel: Version1
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
