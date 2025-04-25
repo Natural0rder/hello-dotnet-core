@@ -18,9 +18,9 @@ pipeline:
             enabled: true
             key: cache-{{ checksum "packages.lock.json" }}
             paths:
-              - ~/.local/share/NuGet/cache
+              - /.local/share/NuGet/cache
           sharedPaths:
-            - ~/.local/share/NuGet/cache
+            - /.local/share/NuGet/cache
           cloneCodebase: true
           execution:
             steps:
