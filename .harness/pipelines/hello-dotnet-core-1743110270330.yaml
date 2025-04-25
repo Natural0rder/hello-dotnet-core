@@ -28,7 +28,7 @@ pipeline:
                     command: |-
                       echo "Welcome to Harness CI"
                       dotnet restore
-                      dotnet build hello-dotnet-core --no-restore
+                      dotnet build hello-dotnet-core.sln --no-restore
                       dotnet test --no-build --verbosity normal
               - step:
                   name: PushToDockerHub-FromTemplate
